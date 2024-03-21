@@ -17,4 +17,79 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: 'wdth' var(--main-font-weight);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: var(--page-gradient);
+  background-size: cover;
+  color: var(--accent-color, #000);
+}
+
+.page__section {
+  display: flex;
+  flex-direction: column;
+  width: var(--section_with);
+  justify-content: center;
+  border: 2px solid var(--accent-color, #000);
+  background: var(--main-color, #fff);
+  color: currentColor;
+}
+
+.header {
+  height: 364px;
+  justify-content: flex-end;
+  margin-block-start: 102px;
+  margin-block-end: 104px;
+  align-items: center;
+  font-family: 'Press Start 2P';
+}
+
+.header__theme-menu {
+  display: flex;
+  margin-block: 25px;
+}
+
+.title-big {
+  font-size: var(--title-size-big, 65px);
+  margin-block-end: 20px;
+}
+
+.title-med {
+  font-size: var(--title-size-med, 65px);
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.theme-menu__button {
+  font-size: 14px;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 57px;
+}
+
+.card__image {
+  object-fit: contain;
+  width: 100%;
+}
+
+.card__description {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__description-text {
+  margin-inline: 25px;
+  padding-block: 27px;
 }

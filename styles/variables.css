@@ -5,44 +5,28 @@
 */
 
 :root {
-  /* отступ от краев */
-  --indentation: 20px;
+  --main-font: 'Inter', sans-serif;
+  --decor-font: 'Press Start 2P', sans-serif;
+  --title-font-weight: 700px;
+  --main-font-weight: 400px;
 
-  /* альтернативный щрифт - в дальнейшем его переопределяем */
-  --mainfont: 'IBM Plex mono', sans-serif;
+  --title-size-big: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --title-size-med: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 
-  /* цвет меню */
-  --menu-color: #ff0070;
+  --main-color: #fff;
+  --accent-color: #000;
 
-  /* цвет заголовков */
-  --title-color: #ff0070;
-
-  /* цвет меню для состояния hover */
-  --menu-color-RGB-transperent: rgb(255 0 112 / 0.4);
-
-  /* цвет шрифта для акцентных элементов */
-  --accent-color: #ff0070;
-
-  /* цвет шрифта для заголовков 1 уровня */
-  --title_big-color: #db00ff;
-
-  /* цвет шрифта для заголовков 2 уровня */
-  --subtitle-colore: #ff0070;
-
-  /* цвет шрифта для заголовков 2 уровня с декором */
-  --subtitle-color-decor: #000028;
-
-  /* цвет шрифта для заголовков 2 и 3 уровня */
-  --mainfont-color: #f1b2ce;
-
-  /* размер шрифта заголовка для планшета или декстопа */
-  --mainfont-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --section_with: clamp(200px, 50%, 700px);
+  --page-gradient: repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0 2px,
+      rgb(211 211 211 /0) 2px 4px
+    ),
+    repeating-linear-gradient(180deg, #000 0 2px, rgb(211 211 211 /0) 2px 4px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
 }
 
 @media screen and (max-width: 575px) {
-
   :root {
-    --mainfont-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    --indentation: 10px;
   }
 }
