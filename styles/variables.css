@@ -7,8 +7,8 @@
 :root {
   --main-font: 'Inter', sans-serif;
   --decor-font: 'Press Start 2P', sans-serif;
-  --title-font-weight: 700px;
-  --main-font-weight: 400px;
+  --title-font-weight: 700;
+  --main-font-weight: 400;
 
   --title-size-big: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   --title-size-med: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
@@ -26,7 +26,12 @@
     linear-gradient(#e7e7e7 0.01%, #1a1a1a);
 }
 
-@media screen and (max-width: 575px) {
+@media (width <= 375px) {
   :root {
+    --section_with: 100vw;
+  }
+
+  .save-button {
+    flex-direction: column;
   }
 }
