@@ -82,6 +82,7 @@
 }
 
 .button {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,6 +99,14 @@
   line-height: normal;
   text-transform: uppercase;
   background: transparent;
+  cursor: pointer;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+  transition:
+    opacity 0.3s,
+    ease;
 }
 
 .theme-menu__item {
@@ -107,6 +116,29 @@
 
 .theme-menu__button:disabled {
   opacity: 0.6;
+  pointer-events: none;
+}
+
+.theme-menu__button:focus {
+  border: none;
+  outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  opacity: 0.6;
+  background-color: var(--accent-color, #000);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.theme-menu__button:focus-visible::after {
+  transition: transform 0.3s;
+  transform: scaleX(1);
 }
 
 .theme-menu__item:has(.theme-menu__button:disabled)::before {
@@ -114,6 +146,7 @@
   position: absolute;
   left: -14px;
   opacity: 0.6;
+  animation: decor-animation 0.5s infinite ease-in-out running both;
 }
 
 .card {
@@ -159,9 +192,9 @@
 }
 
 .card__image {
+  display: block;
   width: 100%;
   object-fit: contain;
-  display: block;
 }
 
 .card__description {
@@ -205,6 +238,31 @@
   padding-block: 11px;
 }
 
+.button:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color, #000);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.button:focus {
+  border: none;
+}
+
+.button:focus-visible {
+  box-shadow: 4px 4px 0 0 var(--accent-color, #000);
+  transition: box-shadow 0.3s;
+}
+
+.button:hover:before {
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(1);
+}
+
 .like-icon {
   width: 100%;
 }
@@ -220,21 +278,38 @@
 }
 
 .button__text {
-  color: var(--accent-color, #000);
+  color: var(--buttom-like-text-color);
   font-family: var(--decor-font, sans-serif);
   font-weight: 400;
   font-size: 14px;
   font-style: normal;
   line-height: 90%; /* 12.6px */
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
 }
 
-.card__icon-botton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.card__icon-button {
   border: none;
-  outline: none;
+  outline: 2px solid transparent;
   background: transparent;
+  width: auto;
+  padding: 0;
+  height: 35px;
+  transition: color 0.3s ease;
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--accent-color);
+}
+
+.card-heart-image {
+  height: 100%;
+}
+
+.save-button-image {
+  mix-blend-mode: difference;
+  color: var(--buttom-like-text-color);
 }
 
 @media (width <= 376px) {

@@ -16,8 +16,9 @@
   --main-color: #fff;
   --accent-color: #000;
   --decor-shadow-color: #fff;
+  --buttom-like-text-color: #fff;
 
-  --section_with: clamp(371px, 50%, 700px);
+  --section_with: clamp(371px, 60%, 700px);
   --page-gradient: repeating-linear-gradient(
       90deg,
       #d3d3d3 0 2px,
