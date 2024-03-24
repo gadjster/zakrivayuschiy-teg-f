@@ -23,7 +23,7 @@
   background-size: cover;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: 'wdth' var(--main-font-weight);
+  font-variation-settings: 'wdth' var(--main-font-weight, 400);
 }
 
 .page__section {
@@ -41,7 +41,7 @@
   align-items: center;
   height: 368px;
   margin-block: 100px;
-  font-family: 'Press Start 2P';
+  font-family: var(--decor-font, sans-serif);
 }
 
 .header__theme-menu {
@@ -54,7 +54,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 52px;
+  gap: 50px;
   margin-block-end: 105px;
 }
 
@@ -86,7 +86,7 @@
   justify-content: center;
   align-items: center;
   border: none;
-  outline: 2px solid var(--accent-color, #00cc14);
+  outline: 2px solid var(--accent-color, #000);
   background: var(--main-color);
 }
 
@@ -100,9 +100,20 @@
   text-transform: uppercase;
 }
 
+.theme-menu__item {
+  position: relative;
+  margin-inline-start: 18px;
+}
+
 .theme-menu__button:disabled {
+  opacity: 0.6;
+}
+
+.theme-menu__item:has(.theme-menu__button:disabled)::before {
   content: '▶';
   opacity: 0.6;
+  position: absolute;
+  left: -14px;
 }
 
 .card {
@@ -119,7 +130,7 @@
   position: absolute;
   top: 25px;
   right: 25px;
-  font-family: var(--decor-font);
+  font-family: var(--decor-font, sans-serif);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -127,6 +138,22 @@
   text-transform: uppercase;
   opacity: 0.5;
   mix-blend-mode: hard-light;
+  text-shadow:
+    -1px 0 var(--decor-shadow-color, #fff),
+    0 1px var(--decor-shadow-color, #fff),
+    1px 0 var(--decor-shadow-color, #fff),
+    0 -1px var(--decor-shadow-color, #fff);
+}
+
+@supports (
+  (text-stroke: 1px var(--decor-shadow-color, #fff)) or
+    (-webkit-text-stroke: 1px var(--decor-shadow-color, #fff))
+) {
+  .image__decor {
+    -webkit-text-stroke: 1px var(--decor-shadow-color, #fff);
+    text-stroke: 1px var(--decor-shadow-color, #fff);
+    text-shadow: none;
+  }
 }
 
 .card__image {
@@ -141,10 +168,10 @@
 }
 
 .card__description-title {
-  padding-inline-start: 10px;
+  padding-inline: 10px;
   padding-block: 5px;
-  font-family: var(--main-font);
-  font-weight: var(--title-font-weight);
+  font-family: var(--main-font, sans-serif);
+  font-weight: var(--title-font-weight, 700);
   font-size: 18px;
   font-style: normal;
   line-height: normal;
@@ -153,8 +180,8 @@
 .card__description-text {
   margin-inline: 25px;
   padding-block-start: 25px;
-  font-family: var(--main-font);
-  font-weight: var(--main-font-weight);
+  font-family: var(--main-font, sans-serif);
+  font-weight: var(--main-font-weight, 400);
   font-size: 18px;
   font-style: normal;
   line-height: 21px; /* 116.667% */
@@ -164,31 +191,34 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 12px;
-  margin-inline-end: 25px;
-  margin-block-end: 25px;
+  gap: 8px;
+  margin-inline-end: 26px;
+  margin-block-end: 27px;
 }
 
 .card__like-button {
   display: flex;
-  min-width: 130px;
-  height: 38px;
-  padding: 9px 17px;
+  padding-block: 11px;
+  padding-inline: 35px;
+}
+
+.like-icon {
+  width: 100%;
 }
 
 .save-button {
   display: flex;
   justify-content: center;
   gap: 8px;
-  min-width: 335px;
-  height: 51px;
   border: none;
-  background: var(--main-color);
+  background: var(--main-color, #fff);
+  padding-block: 16px;
+  padding-inline: 20px;
 }
 
 .button__text {
-  color: var(--accent-color, #00cc14);
-  font-family: var(--decor-font);
+  color: var(--accent-color, #000);
+  font-family: var(--decor-font, sans-serif);
   font-weight: 400;
   font-size: 14px;
   font-style: normal;
@@ -199,4 +229,19 @@
   border: none;
   outline: none;
   background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (width <= 376px) {
+  .save-button {
+    flex-direction: column;
+    width: minmax(100px, calc(100vw- 70px));
+  }
+
+  .header {
+    height: 323px;
+    margin-block: 102px;
+  }
 }

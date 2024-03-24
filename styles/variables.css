@@ -10,13 +10,14 @@
   --title-font-weight: 700;
   --main-font-weight: 400;
 
-  --title-size-big: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  --title-size-med: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --title-size-big: clamp(3.063rem, 1.768vw + 2.648rem, 4.063rem);
+  --title-size-med: clamp(0.875rem, 0.994vw + 0.642rem, 1.438rem);
 
   --main-color: #fff;
   --accent-color: #000;
+  --decor-shadow-color: #fff;
 
-  --section_with: clamp(200px, 50%, 700px);
+  --section_with: clamp(371px, 50%, 700px);
   --page-gradient: repeating-linear-gradient(
       90deg,
       #d3d3d3 0 2px,
@@ -26,12 +27,8 @@
     linear-gradient(#e7e7e7 0.01%, #1a1a1a);
 }
 
-@media (width <= 375px) {
+@media (width <= 376px) {
   :root {
-    --section_with: 100vw;
-  }
-
-  .save-button {
-    flex-direction: column;
+    --section_with: 100%;
   }
 }

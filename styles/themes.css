@@ -8,6 +8,7 @@
 :root.theme-dark {
   --main-color: #000;
   --accent-color: #00cc14;
+  --decor-shadow-color: #000;
   --title-font-weight: 785;
   --main-font-weight: 465;
   --page-gradient: repeating-linear-gradient(
@@ -22,6 +23,7 @@
 :root.theme-light {
   --main-color: #fff;
   --accent-color: #000;
+  --decor-shadow-color: #fff;
   --title-font-weight: 700;
   --main-font-weight: 400;
   --page-gradient: repeating-linear-gradient(
