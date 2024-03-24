@@ -60,17 +60,17 @@
 
 .title-big {
   margin-block-end: 20px;
+  font-weight: 400;
   font-size: var(--title-size-big, 65px);
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
 }
 
 .title-med {
+  font-weight: 400;
   font-size: var(--title-size-med, 65px);
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
 }
@@ -92,12 +92,12 @@
 
 .theme-menu__button {
   border: none;
-  font-size: 14px;
-  background: transparent;
-  font-style: normal;
   font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
   line-height: normal;
   text-transform: uppercase;
+  background: transparent;
 }
 
 .theme-menu__item {
@@ -111,9 +111,9 @@
 
 .theme-menu__item:has(.theme-menu__button:disabled)::before {
   content: '▶';
-  opacity: 0.6;
   position: absolute;
   left: -14px;
+  opacity: 0.6;
 }
 
 .card {
@@ -124,25 +124,27 @@
 
 .card__description-image {
   position: relative;
+  border-top: 2px solid var(--accent-color, #000);
+  border-bottom: 2px solid var(--accent-color, #000);
 }
 
 .image__decor {
   position: absolute;
   top: 25px;
   right: 25px;
+  opacity: 0.5;
   font-family: var(--decor-font, sans-serif);
+  font-weight: 400;
   font-size: 14px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
-  opacity: 0.5;
-  mix-blend-mode: hard-light;
   text-shadow:
     -1px 0 var(--decor-shadow-color, #fff),
     0 1px var(--decor-shadow-color, #fff),
     1px 0 var(--decor-shadow-color, #fff),
     0 -1px var(--decor-shadow-color, #fff);
+  mix-blend-mode: hard-light;
 }
 
 @supports (
@@ -150,15 +152,16 @@
     (-webkit-text-stroke: 1px var(--decor-shadow-color, #fff))
 ) {
   .image__decor {
+    text-shadow: none;
     -webkit-text-stroke: 1px var(--decor-shadow-color, #fff);
     text-stroke: 1px var(--decor-shadow-color, #fff);
-    text-shadow: none;
   }
 }
 
 .card__image {
   width: 100%;
   object-fit: contain;
+  display: block;
 }
 
 .card__description {
@@ -198,8 +201,8 @@
 
 .card__like-button {
   display: flex;
-  padding-block: 11px;
   padding-inline: 35px;
+  padding-block: 11px;
 }
 
 .like-icon {
@@ -211,9 +214,9 @@
   justify-content: center;
   gap: 8px;
   border: none;
-  background: var(--main-color, #fff);
-  padding-block: 16px;
   padding-inline: 20px;
+  padding-block: 16px;
+  background: var(--main-color, #fff);
 }
 
 .button__text {
@@ -226,12 +229,12 @@
 }
 
 .card__icon-botton {
-  border: none;
-  outline: none;
-  background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  outline: none;
+  background: transparent;
 }
 
 @media (width <= 376px) {
