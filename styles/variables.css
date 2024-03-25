@@ -18,18 +18,24 @@
   --decor-shadow-color: #fff;
   --buttom-like-text-color: #fff;
 
+  --like-icon-contour: var(--accent-color);
+  --like-icon-sparks: #ff0000;
+  --like-icon-main-body: var(--accent-color);
+  --like-icon-core: var(--accent-color);
+
   --section_with: clamp(371px, 60%, 700px);
   --page-gradient: repeating-linear-gradient(
-      90deg,
-      #d3d3d3 0 2px,
-      rgb(211 211 211 /0) 2px 4px
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
     ),
-    repeating-linear-gradient(180deg, #000 0 2px, rgb(211 211 211 /0) 2px 4px),
-    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
-}
-
-@media (width <= 376px) {
-  :root {
-    --section_with: 100%;
-  }
+    repeating-linear-gradient(
+      90deg,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(#e7e7e7, #1a1a1a);
 }
