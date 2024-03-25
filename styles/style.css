@@ -200,6 +200,7 @@
 .card:nth-of-type(1) .card__image {
   filter: invert(1) brightness(100%) saturate(60%) hue-rotate(90deg);
 }
+
 .card:nth-of-type(2) .card__image {
   filter: sepia(1);
 }
@@ -329,11 +330,11 @@
 }
 
 .like-icon:active .core {
-  fill: #ff0000;
+  fill: #f00;
 }
 
 .like-icon:active .main-body {
-  fill: #ff0000;
+  fill: #f00;
   transition-delay: 0.05s;
 }
 
@@ -346,19 +347,16 @@
 }
 
 .like-icon.is-liked .contour {
-  fill: #ff0000;
+  fill: #f00;
   transition-delay: 0.06s;
 }
 
 .like-icon.is-liked .core {
-  fill: #ff0000;
+  fill: #f00;
 }
 
 .like-icon.is-liked .main-body {
-  fill: #ff0000;
-}
-
-.like-icon.is-liked .contour {
+  fill: #f00;
 }
 
 .save-button {
@@ -468,6 +466,7 @@
     height: 323px;
     margin-block: 102px;
   }
+
   .save__dialog {
     min-width: 341px;
   }
