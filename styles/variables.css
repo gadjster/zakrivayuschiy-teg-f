@@ -6,7 +6,7 @@
 
 :root {
   --main-font: 'Inter', sans-serif;
-  --decor-font: 'Press Start 2P', sans-serif;
+  --decor-font: 'Press Start 2P', fantasy;
   --title-font-weight: 700;
   --main-font-weight: 400;
 
@@ -37,5 +37,5 @@
       transparent 2px,
       transparent 4px
     ),
-    linear-gradient(#e7e7e7, #1a1a1a);
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
 }

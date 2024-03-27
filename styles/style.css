@@ -43,7 +43,7 @@
   align-items: center;
   min-height: 368px;
   margin-block: 100px;
-  font-family: var(--decor-font, sans-serif);
+  font-family: var(--decor-font, fantasy);
 }
 
 .header__theme-menu {
@@ -80,7 +80,7 @@
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 11px;
+  gap: 8px;
 }
 
 .button {
@@ -167,7 +167,7 @@
   top: 25px;
   right: 25px;
   opacity: 0.5;
-  font-family: var(--decor-font, sans-serif);
+  font-family: var(--decor-font, fantasy);
   font-weight: 400;
   font-size: 14px;
   font-style: normal;
@@ -312,7 +312,7 @@
 
 .button__text {
   color: var(--buttom-like-text-color);
-  font-family: var(--decor-font, sans-serif);
+  font-family: var(--decor-font, fantasy);
   font-weight: 400;
   font-size: 14px;
   font-style: normal;
@@ -358,7 +358,7 @@
   background: var(--main-color);
   border: 2px solid var(--accent-color);
   color: currentColor;
-  font-family: var(--decor-font, sans-serif);
+  font-family: var(--decor-font, fantasy);
   text-transform: uppercase;
   font-size: 14px;
   line-height: 21px;
@@ -399,17 +399,18 @@
 
 @media (width <= 376px) {
   :root {
-    --section_with: 100v;
+    --section_with: 100vw;
   }
 
   .save-button {
     flex-direction: column;
-    width: 275px;
+    width: 305px;
+    gap: 10px;
   }
 
   .header {
-    min-height: 323px;
-    margin-block: 102px;
+    min-height: 327px;
+    margin-block: 100px;
   }
 
   .save__dialog {
@@ -418,5 +419,6 @@
 
   .save-button-image {
     width: 28px;
+    height: 28px;
   }
 }
