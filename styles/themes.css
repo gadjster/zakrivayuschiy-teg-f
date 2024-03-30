@@ -52,6 +52,7 @@
 }
 
 @media (prefers-color-scheme: light) {
+
   :root {
     --main-color: #fff;
     --accent-color: #000;
@@ -77,6 +78,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
+
   :root {
     --main-color: #000;
     --accent-color: #00cc14;
