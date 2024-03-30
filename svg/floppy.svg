@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
 <symbol id="floppy"
-stroke="currentColor"
+stroke="none"
 fill="white"
 >
   <rect width="1.61538" height="1.61538" fill="currentColor"/>
