@@ -187,7 +187,6 @@
   (text-stroke: 1px var(--decor-shadow-color)) or
     (-webkit-text-stroke: 1px var(--decor-shadow-color))
 ) {
-
   .image__decor {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--decor-shadow-color);
@@ -252,12 +251,16 @@
 
 .card__description-text {
   margin-inline: 25px;
-  padding-block-start: 25px;
+  margin-block-start: 25px;
   font-family: var(--main-font, sans-serif);
   font-size: 18px;
   font-style: normal;
   line-height: 21px; /* 116.667% */
   font-variation-settings: 'wght' var(--main-font-weight);
+}
+
+.card__description-text:last-of-type {
+  margin-block-end: 20px;
 }
 
 .card__controls {
@@ -293,7 +296,7 @@
 }
 
 .button:focus-visible {
-  box-shadow: 4px 4px 0 0 var(--accent-color);
+  box-shadow: 2px 2px 0 0 var(--accent-color);
 }
 
 .button:hover:before {
@@ -406,7 +409,6 @@
 }
 
 @media (width <= 376px) {
-
   :root {
     --section_with: 100vw;
   }
